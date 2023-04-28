@@ -14,6 +14,7 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       appBar: buildHomeAppBar(context, setState),
       body: const HomeViewBody(),
+
     );
   }
 }

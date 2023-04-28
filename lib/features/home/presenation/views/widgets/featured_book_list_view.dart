@@ -9,14 +9,15 @@ class FeaturedBookListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return ListView.separated(
       scrollDirection: Axis.horizontal,
       itemBuilder: (BuildContext context, int index){
-        return const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
-          child: CustomListViewItem(),
-        );
+        return const CustomListViewItem();
       },
+      separatorBuilder: (BuildContext context, int index) {
+        return const SizedBox(width: 16,);
+      },
+      itemCount: 10,
     );
   }
 }
