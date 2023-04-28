@@ -5,10 +5,13 @@ const Color whiteClr = Colors.white;
 const Color blackClr = Colors.black;
 const primaryClr = Color(0xFFCCCCCC);
 const darkPrimaryClr = Color(0xFF100b20);
+const frontClr = Colors.black;
+const darkFrontClr = Colors.white;
 const secondaryClr = Colors.lightBlue;
 const darkSecondaryClr = Color(0xFF424242);
 
 class ThemeColors{
   static Color get primary => Get.isDarkMode? darkPrimaryClr : primaryClr;
   static Color get secondary => Get.isDarkMode? darkSecondaryClr : secondaryClr;
+  static Color get front => Get.isDarkMode? darkFrontClr : frontClr;
 }
