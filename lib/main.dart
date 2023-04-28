@@ -1,6 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bookly_app/features/splash/presentation/views/splash_view.dart';
+import 'package:flutter_bookly_app/services/theme_services.dart';
+import 'package:flutter_bookly_app/shared/my_bloc_observer.dart';
+import 'package:flutter_bookly_app/shared/themes.dart';
+import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  Bloc.observer = MyBlocObserver();
+
+  await GetStorage.init();
   runApp(const BooklyApp());
 }
 
@@ -10,11 +21,15 @@ class BooklyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const Text('Bookly', style: TextStyle(fontSize: 50),),
+    ThemeMode themeMode = ThemeServices().theme;
+    // Get.changeThemeMode(themeMode);
+
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: Themes.lightThem,
+      darkTheme: Themes.darkThem,
+      themeMode: themeMode,
+      home:  const SplashView(),
     );
   }
 }
