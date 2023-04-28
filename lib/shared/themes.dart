@@ -5,27 +5,27 @@ import 'package:google_fonts/google_fonts.dart';
 
 class Themes {
   static final ThemeData lightThem = ThemeData(
-    primaryColor: ThemeColors.primary,
-    scaffoldBackgroundColor: ThemeColors.primary,
+    primaryColor: primaryClr,
+    scaffoldBackgroundColor: primaryClr,
     fontFamily: GoogleFonts.poppins().fontFamily,
-    appBarTheme: AppBarTheme(
-        color: ThemeColors.primary,
+    appBarTheme: const AppBarTheme(
+        color: primaryClr,
     ),
     colorScheme: ThemeData().colorScheme.copyWith(
-      background: ThemeColors.primary,
+      background: primaryClr,
       brightness: Brightness.light,
     ),
   );
 
   static final ThemeData darkThem = ThemeData(
-    primaryColor: ThemeColors.primary,
-    scaffoldBackgroundColor: ThemeColors.primary,
+    primaryColor: darkPrimaryClr,
+    scaffoldBackgroundColor: darkPrimaryClr,
     fontFamily: GoogleFonts.poppins().fontFamily,
-    appBarTheme: AppBarTheme(
-      color: ThemeColors.primary,
+    appBarTheme: const AppBarTheme(
+      color: darkPrimaryClr,
     ),
     colorScheme: ThemeData().colorScheme.copyWith(
-      background: ThemeColors.primary,
+      background: darkPrimaryClr,
       brightness: Brightness.dark,
     ),
   );

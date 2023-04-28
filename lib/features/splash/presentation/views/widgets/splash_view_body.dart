@@ -1,13 +1,24 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bookly_app/services/assets_paths.dart';
+import 'package:flutter_bookly_app/shared/themes.dart';
 
 class SplashViewBody extends StatelessWidget {
   const SplashViewBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Image.asset(AssetPaths.logo),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Image.asset(AssetPaths.logo),
+        const SizedBox(height: 30,),
+        Text(
+          'Read Free Books',
+          style: Themes.headingStyle,
+          textAlign: TextAlign.center,
+        )
+      ],
     );
   }
 }
