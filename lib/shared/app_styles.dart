@@ -8,14 +8,14 @@ class AppStyles{
     return GoogleFonts.poppins(
       textStyle: TextStyle(
         color: Get.isDarkMode? whiteClr : blackClr,
-        fontSize: 20,
+        fontSize: 18,
         fontWeight: FontWeight.w600,
       ),
     );
   }
 
   static TextStyle get headingStyle {
-    return GoogleFonts.lato(
+    return GoogleFonts.montserrat(
       textStyle: TextStyle(
         color: Get.isDarkMode? whiteClr : blackClr,
         fontSize: 24,
@@ -25,7 +25,7 @@ class AppStyles{
   }
 
   static TextStyle get subHeadingStyle {
-    return GoogleFonts.lato(
+    return GoogleFonts.montserrat(
       textStyle: TextStyle(
         color: Get.isDarkMode? whiteClr : blackClr,
         fontSize: 20 ,
@@ -35,7 +35,7 @@ class AppStyles{
   }
 
   static TextStyle get titleStyle {
-    return GoogleFonts.lato(
+    return GoogleFonts.montserrat(
       textStyle: TextStyle(
         color: Get.isDarkMode? whiteClr : blackClr,
         fontSize: 18 ,
@@ -45,7 +45,7 @@ class AppStyles{
   }
 
   static TextStyle get subTitleStyle {
-    return GoogleFonts.lato(
+    return GoogleFonts.montserrat(
       textStyle: TextStyle(
         color: Get.isDarkMode? whiteClr : blackClr,
         fontSize: 16 ,
@@ -55,7 +55,7 @@ class AppStyles{
   }
 
   static TextStyle get bodyStyle {
-    return GoogleFonts.lato(
+    return GoogleFonts.montserrat(
       textStyle: TextStyle(
         color: Get.isDarkMode? whiteClr : blackClr,
         fontSize: 14 ,
@@ -65,7 +65,7 @@ class AppStyles{
   }
 
   static TextStyle get subBodyStyle {
-    return GoogleFonts.lato(
+    return GoogleFonts.montserrat(
       textStyle: TextStyle(
         color: Get.isDarkMode? whiteClr.withOpacity(0.5) : whiteClr,
         fontSize: 14 ,

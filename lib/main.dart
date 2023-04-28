@@ -15,9 +15,14 @@ void main() async{
   runApp(const BooklyApp());
 }
 
-class BooklyApp extends StatelessWidget {
+class BooklyApp extends StatefulWidget {
   const BooklyApp({super.key});
 
+  @override
+  State<BooklyApp> createState() => _BooklyAppState();
+}
+
+class _BooklyAppState extends State<BooklyApp> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
