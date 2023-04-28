@@ -3,7 +3,6 @@ import 'package:flutter_bookly_app/features/home/presenation/views/widgets/home_
 import 'package:flutter_bookly_app/services/assets_paths.dart';
 import 'package:flutter_bookly_app/services/theme_colors.dart';
 import 'package:flutter_bookly_app/shared/widgets/build_appbar.dart';
-import 'package:get/get.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -23,12 +22,12 @@ class _HomeViewState extends State<HomeView> {
         actionRow: Row(
           children: [
             Image.asset(AssetPaths.logo, width: 100, height: 30,),
-            Spacer(),
+            const Spacer(),
             GestureDetector(
               onTap: (){},
               child: Icon(Icons.search, size: 35, color: ThemeColors.front,),
             ),
-            SizedBox(width: 10,),
+            const SizedBox(width: 10,),
           ],
         )
       ),
