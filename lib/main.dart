@@ -22,7 +22,6 @@ class BooklyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ThemeMode themeMode = ThemeServices().theme;
-    print(themeMode);
     // Get.changeThemeMode(themeMode);
 
     return GetMaterialApp(
