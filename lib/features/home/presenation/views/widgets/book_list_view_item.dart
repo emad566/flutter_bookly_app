@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bookly_app/core/constants/aap_constants.dart';
+import 'package:flutter_bookly_app/core/services/app_styles.dart';
+import 'package:flutter_bookly_app/core/services/size_config.dart';
+import 'package:flutter_bookly_app/core/services/theme_colors.dart';
 import 'package:flutter_bookly_app/features/home/presenation/views/widgets/custom_list_view_item.dart';
-import 'package:flutter_bookly_app/services/theme_colors.dart';
-import 'package:flutter_bookly_app/shared/app_styles.dart';
-import 'package:flutter_bookly_app/shared/size_config.dart';
 
 class BookListViewItem extends StatelessWidget {
   const BookListViewItem({Key? key}) : super(key: key);
@@ -28,9 +29,8 @@ class BookListViewItem extends StatelessWidget {
             children: [
               Text(
                 'Haryy Potter and the Goblet of Fire',
-                style: AppStyles.subHeadingStyle.copyWith(
-                  fontWeight: FontWeight.w100,
-                  fontSize: 18,
+                style: AppStyles.style18Bold.copyWith(
+                  fontFamily: AppConstants.secondaryFontFamily,
                 ),
                 textAlign: TextAlign.justify,
               ),
@@ -39,8 +39,8 @@ class BookListViewItem extends StatelessWidget {
               ),
               Text(
                 'J.K. Rowling',
-                style: AppStyles.subTitleStyle.copyWith(
-                  color: ThemeColors.secondary,
+                style: AppStyles.style14.copyWith(
+                  color: ThemeColors.secondaryBg,
                 ),
                 textAlign: TextAlign.left,
               ),
@@ -48,7 +48,7 @@ class BookListViewItem extends StatelessWidget {
                 children: [
                   Text(
                     '19.99 \$',
-                    style: AppStyles.subHeadingStyle,
+                    style: AppStyles.style18Bold,
                   ),
                   const Spacer(),
                   IconButton(
@@ -61,12 +61,12 @@ class BookListViewItem extends StatelessWidget {
                   ),
                   Text(
                     '4.8  ',
-                    style: AppStyles.titleStyle,
+                    style: AppStyles.style16,
                   ),
                   Text(
                     '(2390) ',
-                    style: AppStyles.subTitleStyle
-                        .copyWith(color: ThemeColors.secondary),
+                    style: AppStyles.style14
+                        .copyWith(color: ThemeColors.secondaryBg),
                   ),
                 ],
               ),

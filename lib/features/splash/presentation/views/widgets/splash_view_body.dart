@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_bookly_app/core/constants/aap_constants.dart';
+import 'package:flutter_bookly_app/core/constants/assets_paths.dart';
 import 'package:flutter_bookly_app/features/home/presenation/views/home_view.dart';
 import 'package:flutter_bookly_app/features/splash/presentation/views/widgets/sliding_text.dart';
-import 'package:flutter_bookly_app/services/assets_paths.dart';
-import 'package:flutter_bookly_app/shared/constants.dart';
 import 'package:get/get.dart';
 
 class SplashViewBody extends StatefulWidget {

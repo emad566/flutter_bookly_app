@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_bookly_app/core/services/app_styles.dart';
+import 'package:flutter_bookly_app/core/services/size_config.dart';
 import 'package:flutter_bookly_app/features/home/presenation/views/widgets/book_list_view_item.dart';
-import 'package:flutter_bookly_app/shared/app_styles.dart';
-import 'package:flutter_bookly_app/shared/size_config.dart';
 
 import 'featured_book_list_view.dart';
 
@@ -24,7 +24,7 @@ class HomeViewBody extends StatelessWidget {
           const SizedBox(height: 30),
           Text(
             'Best Seller',
-            style: AppStyles.titleMedium,
+            style: AppStyles.style22Bold,
             textAlign: TextAlign.left,
           ),
           const SizedBox(height: 20),

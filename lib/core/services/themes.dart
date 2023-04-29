@@ -1,30 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bookly_app/services/theme_colors.dart';
+import 'package:flutter_bookly_app/core/constants/app_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 abstract class Themes {
   static final ThemeData lightThem = ThemeData(
-    primaryColor: primaryClr,
-    scaffoldBackgroundColor: primaryClr,
+    primaryColor: AppColors.primaryBg,
+    scaffoldBackgroundColor: AppColors.primaryBg,
     textTheme: GoogleFonts.montserratTextTheme(ThemeData.light().textTheme),
     appBarTheme: const AppBarTheme(
-      color: primaryClr,
+      color: AppColors.primaryBg,
     ),
     colorScheme: ThemeData().colorScheme.copyWith(
-      background: primaryClr,
+      background: AppColors.primaryBg,
       brightness: Brightness.light,
     ),
   );
 
   static final ThemeData darkThem = ThemeData(
-    primaryColor: darkPrimaryClr,
-    scaffoldBackgroundColor: darkPrimaryClr,
+    primaryColor: AppColors.darkPrimaryBg,
+    scaffoldBackgroundColor: AppColors.darkPrimaryBg,
     textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
     appBarTheme: const AppBarTheme(
-      color: darkPrimaryClr,
+      color: AppColors.darkPrimaryBg,
     ),
     colorScheme: ThemeData().colorScheme.copyWith(
-      background: darkPrimaryClr,
+      background: AppColors.darkPrimaryBg,
       brightness: Brightness.dark,
     ),
   );

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_bookly_app/services/assets_paths.dart';
-import 'package:flutter_bookly_app/services/theme_colors.dart';
+import 'package:flutter_bookly_app/core/constants/app_colors.dart';
+import 'package:flutter_bookly_app/core/constants/assets_paths.dart';
 
 class CustomListViewItem extends StatelessWidget {
   const CustomListViewItem({Key? key}) : super(key: key);
@@ -12,7 +12,7 @@ class CustomListViewItem extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
-          color: darkSecondaryClr,
+          color: AppColors.secondaryBg,
           image: const DecorationImage(
             fit: BoxFit.fill,
             image: AssetImage(AssetPaths.test)

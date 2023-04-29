@@ -1,7 +1,6 @@
 
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_bookly_app/shared/app_styles.dart';
-
+import 'package:flutter_bookly_app/core/services/app_styles.dart';
 
 class SlidingText extends StatelessWidget {
   const SlidingText({
@@ -18,7 +17,7 @@ class SlidingText extends StatelessWidget {
       builder: (BuildContext context, Widget? child) {
         return Text(
           'Read Free Books',
-          style: AppStyles.headingStyle,
+          style: AppStyles.style22Bold,
           textAlign: TextAlign.center,
         );
       },

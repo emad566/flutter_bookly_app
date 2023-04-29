@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bookly_app/services/theme_colors.dart';
-import 'package:flutter_bookly_app/services/theme_services.dart';
+import 'package:flutter_bookly_app/core/services/theme_colors.dart';
+import 'package:flutter_bookly_app/core/services/theme_services.dart';
 import 'package:get/get.dart';
 
 AppBar buildAppBar({
@@ -16,9 +16,9 @@ AppBar buildAppBar({
       onPressed: (){
         Get.back();
             },
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back,
-              color: whiteClr,
+              color: ThemeColors.white,
             ),
           )
         : Container(),
@@ -34,9 +34,9 @@ AppBar buildAppBar({
           });
         },
         icon: Get.isDarkMode?
-        const Icon(Icons.nightlight_outlined, size: 24, color: whiteClr,)
+        Icon(Icons.nightlight_outlined, size: 24, color: ThemeColors.white,)
             :
-        const Icon(Icons.wb_sunny_outlined, size: 24, color: whiteClr,),
+        Icon(Icons.wb_sunny_outlined, size: 24, color: ThemeColors.white,),
       ),
 
 
