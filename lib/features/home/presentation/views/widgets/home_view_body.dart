@@ -14,22 +14,24 @@ class HomeViewBody extends StatelessWidget {
 
     return Padding(
       padding: const EdgeInsets.all(20.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(
-            height: SizeConfig.screenHeight * .3,
-            child: const FeaturedBookListView(),
-          ),
-          const SizedBox(height: 30),
-          Text(
-            'Best Seller',
-            style: AppStyles.style22Bold,
-            textAlign: TextAlign.left,
-          ),
-          const SizedBox(height: 20),
-          const BestSellerListView(),
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(
+              height: SizeConfig.screenHeight * .3,
+              child: const FeaturedBookListView(),
+            ),
+            const SizedBox(height: 30),
+            Text(
+              'Best Seller',
+              style: AppStyles.style22Bold,
+              textAlign: TextAlign.left,
+            ),
+            const SizedBox(height: 20),
+            const BestSellerListView(),
+          ],
+        ),
       ),
     );
   }

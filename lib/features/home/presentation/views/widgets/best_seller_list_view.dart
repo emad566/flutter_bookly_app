@@ -8,17 +8,17 @@ class BestSellerListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: ListView.separated(
-        itemBuilder: (BuildContext context, index){
-          // ignore: prefer_const_constructors
-          return BookListViewItem();
-        },
-        separatorBuilder: (BuildContext context, index){
-          return const SizedBox(height: 16,);
-        },
-        itemCount: 3,
-      ),
+    return ListView.separated(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      itemBuilder: (BuildContext context, index){
+        // ignore: prefer_const_constructors
+        return BookListViewItem();
+      },
+      separatorBuilder: (BuildContext context, index){
+        return const SizedBox(height: 16,);
+      },
+      itemCount: 20,
     );
   }
 }
