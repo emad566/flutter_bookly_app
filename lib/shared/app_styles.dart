@@ -3,12 +3,12 @@ import 'package:flutter_bookly_app/services/theme_colors.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class AppStyles{
+abstract  class AppStyles{
   static TextStyle get titleMedium {
     return GoogleFonts.poppins(
       textStyle: TextStyle(
         color: Get.isDarkMode? whiteClr : blackClr,
-        fontSize: 18,
+        fontSize: 22,
         fontWeight: FontWeight.w600,
       ),
     );

@@ -1,7 +1,7 @@
-class Caches{
+abstract class Caches{
 
 }
 
-class AppConstants{
+abstract class AppConstants{
   static const transitionDuration = Duration(milliseconds: 250);
 }

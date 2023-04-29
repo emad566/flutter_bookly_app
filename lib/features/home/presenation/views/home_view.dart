@@ -15,7 +15,6 @@ class _HomeViewState extends State<HomeView> {
       appBar: buildHomeAppBar(context, setState),
       // ignore: prefer_const_constructors
       body:  HomeViewBody(),
-
     );
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bookly_app/services/theme_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Themes {
+abstract class Themes {
   static final ThemeData lightThem = ThemeData(
     primaryColor: primaryClr,
     scaffoldBackgroundColor: primaryClr,
