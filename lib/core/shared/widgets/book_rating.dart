@@ -10,6 +10,7 @@ class BookRating extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         IconButton(
           onPressed: () {},
@@ -26,7 +27,7 @@ class BookRating extends StatelessWidget {
         Text(
           '(2390) ',
           style: AppStyles.style14
-              .copyWith(color: ThemeColors.secondaryBg),
+              .copyWith(color: ThemeColors.secondaryText),
         ),
       ],
     );
