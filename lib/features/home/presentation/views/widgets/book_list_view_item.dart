@@ -3,7 +3,8 @@ import 'package:flutter_bookly_app/core/constants/aap_constants.dart';
 import 'package:flutter_bookly_app/core/services/app_styles.dart';
 import 'package:flutter_bookly_app/core/services/size_config.dart';
 import 'package:flutter_bookly_app/core/services/theme_colors.dart';
-import 'package:flutter_bookly_app/features/home/presenation/views/widgets/custom_list_view_item.dart';
+import 'package:flutter_bookly_app/core/shared/widgets/book_rating.dart';
+import 'package:flutter_bookly_app/features/home/presentation/views/widgets/custom_list_view_item.dart';
 
 class BookListViewItem extends StatelessWidget {
   const BookListViewItem({Key? key}) : super(key: key);
@@ -32,6 +33,8 @@ class BookListViewItem extends StatelessWidget {
                 style: AppStyles.style18Bold.copyWith(
                   fontFamily: AppConstants.secondaryFontFamily,
                 ),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.justify,
               ),
               const SizedBox(
@@ -42,6 +45,8 @@ class BookListViewItem extends StatelessWidget {
                 style: AppStyles.style14.copyWith(
                   color: ThemeColors.secondaryBg,
                 ),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.left,
               ),
               Row(
@@ -51,23 +56,7 @@ class BookListViewItem extends StatelessWidget {
                     style: AppStyles.style18Bold,
                   ),
                   const Spacer(),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.star,
-                      color: ThemeColors.star,
-                      size: 25,
-                    ),
-                  ),
-                  Text(
-                    '4.8  ',
-                    style: AppStyles.style16,
-                  ),
-                  Text(
-                    '(2390) ',
-                    style: AppStyles.style14
-                        .copyWith(color: ThemeColors.secondaryBg),
-                  ),
+                  const BookRating(),
                 ],
               ),
             ],
