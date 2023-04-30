@@ -7,15 +7,24 @@ import 'package:flutter_bookly_app/features/home/data/models/repos/home_repo.dar
 
 class HomeRepoImp extends HomeRepo {
   @override
-  Future<Either<Failure, BooksModel>> fetchBestSellerBooks() async {
-    throw UnimplementedError();
+  Future<Either<Failure, BooksModel>> fetchFeaturedBooks() async {
+    try {
+      dynamic data = await ApiService.get(
+          endPoint: 'volumes?Filtering=free-ebook&q=subject:programming');
+      BooksModel booksModel = BooksModel.fromJson(data);
+      return right(booksModel);
+    } on DioError catch (dioError){
+      return left(ServerFailure.fromDioError(dioError));
+    } catch(e){
+      return left(ServerFailure(e.toString()));
+    }
   }
 
   @override
   Future<Either<Failure, BooksModel>> fetchNewestBooks() async {
     try {
       dynamic data = await ApiService.get(
-          endPoint: 'volumes?q=subject:programming&sorting=newest');
+          endPoint: 'volumes?Filtering=free-ebook&q=subject:programming&sorting=newest');
       BooksModel booksModel = BooksModel.fromJson(data);
       return right(booksModel);
     } on DioError catch (dioError){
