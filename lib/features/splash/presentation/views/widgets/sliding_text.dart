@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bookly_app/core/services/app_styles.dart';
 

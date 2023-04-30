@@ -11,11 +11,13 @@ class FeaturedBookListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.separated(
       scrollDirection: Axis.horizontal,
-      itemBuilder: (BuildContext context, int index){
+      itemBuilder: (BuildContext context, int index) {
         return const CustomListViewItem();
       },
       separatorBuilder: (BuildContext context, int index) {
-        return const SizedBox(width: 16,);
+        return const SizedBox(
+          width: 16,
+        );
       },
       itemCount: 10,
     );

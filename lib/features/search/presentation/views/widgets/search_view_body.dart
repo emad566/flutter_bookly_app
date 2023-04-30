@@ -14,23 +14,32 @@ class SearchViewBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(height: 16,),
+        const SizedBox(
+          height: 16,
+        ),
         CustomTextField(
           hintText: 'Search',
           controller: _searchController,
           inputKey: _searchKey,
           isRequired: false,
-          suffixIcon: Icon(Icons.search, size: 30, color: ThemeColors.secondaryText,),
+          suffixIcon: Icon(
+            Icons.search,
+            size: 30,
+            color: ThemeColors.secondaryText,
+          ),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 8),
-          child: Text('Search Result', style: AppStyles.style16Bold,),
+          child: Text(
+            'Search Result',
+            style: AppStyles.style16Bold,
+          ),
         ),
-        const Expanded(child: Padding(
+        const Expanded(
+            child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 12.0),
           child: ResultBookListView(),
         )),
-
       ],
     );
   }

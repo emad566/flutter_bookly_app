@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-abstract  class AppColors{
+abstract class AppColors {
   //Generic Colors
   static const Color white = Colors.white;
   static const Color black = Colors.black;
@@ -10,7 +10,7 @@ abstract  class AppColors{
   static const Color secondaryText = Color(0xFF666666);
   static const Color tripleText = Color(0xFF999999);
   static const Color primaryBg = Color(0xFFCCCCCC);
-  static  Color secondaryBg = Colors.black.withOpacity(.9);
+  static Color secondaryBg = Colors.black.withOpacity(.9);
   static const Color tripleBg = Color(0xFF666666);
   static const Color star = Colors.deepOrange;
 

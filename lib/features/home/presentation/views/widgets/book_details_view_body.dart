@@ -18,7 +18,8 @@ class BookDetailsViewBody extends StatelessWidget {
         SliverFillRemaining(
           child: Container(
             width: double.infinity,
-            padding: const EdgeInsets.only(top: 24, bottom: 0, left: 16, right: 16),
+            padding:
+                const EdgeInsets.only(top: 24, bottom: 0, left: 16, right: 16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: const [
@@ -34,5 +35,3 @@ class BookDetailsViewBody extends StatelessWidget {
     );
   }
 }
-
-

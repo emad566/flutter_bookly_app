@@ -11,9 +11,9 @@ abstract class Themes {
       color: AppColors.primaryBg,
     ),
     colorScheme: ThemeData().colorScheme.copyWith(
-      background: AppColors.primaryBg,
-      brightness: Brightness.light,
-    ),
+          background: AppColors.primaryBg,
+          brightness: Brightness.light,
+        ),
   );
 
   static final ThemeData darkThem = ThemeData(
@@ -24,8 +24,8 @@ abstract class Themes {
       color: AppColors.darkPrimaryBg,
     ),
     colorScheme: ThemeData().colorScheme.copyWith(
-      background: AppColors.darkPrimaryBg,
-      brightness: Brightness.dark,
-    ),
+          background: AppColors.darkPrimaryBg,
+          brightness: Brightness.dark,
+        ),
   );
 }

@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bookly_app/core/constants/aap_constants.dart';
 import 'package:flutter_bookly_app/core/services/theme_colors.dart';
 
-abstract  class AppStyles{
-
+abstract class AppStyles {
   static TextStyle get style30 {
     return TextStyle(
       fontFamily: AppConstants.primaryFontFamily,
@@ -76,7 +75,6 @@ abstract  class AppStyles{
     );
   }
 
-
   static TextStyle get style14 {
     return TextStyle(
       fontFamily: AppConstants.primaryFontFamily,
@@ -86,7 +84,6 @@ abstract  class AppStyles{
     );
   }
 
-
   static TextStyle get style12 {
     return TextStyle(
       fontFamily: AppConstants.primaryFontFamily,
@@ -95,7 +92,6 @@ abstract  class AppStyles{
       fontWeight: FontWeight.normal,
     );
   }
-
 
   static TextStyle get style10 {
     return TextStyle(
@@ -187,7 +183,6 @@ abstract  class AppStyles{
     );
   }
 
-
   static TextStyle get style14Bold {
     return TextStyle(
       fontFamily: AppConstants.primaryFontFamily,
@@ -197,7 +192,6 @@ abstract  class AppStyles{
     );
   }
 
-
   static TextStyle get style12Bold {
     return TextStyle(
       fontFamily: AppConstants.primaryFontFamily,
@@ -206,7 +200,6 @@ abstract  class AppStyles{
       fontWeight: FontWeight.bold,
     );
   }
-
 
   static TextStyle get style10Bold {
     return TextStyle(
@@ -225,5 +218,4 @@ abstract  class AppStyles{
       fontWeight: FontWeight.bold,
     );
   }
-
 }

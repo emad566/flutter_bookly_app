@@ -12,8 +12,8 @@ class SplashViewBody extends StatefulWidget {
   State<SplashViewBody> createState() => _SplashViewBodyState();
 }
 
-class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProviderStateMixin {
-
+class _SplashViewBodyState extends State<SplashViewBody>
+    with SingleTickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<Offset> slidingAnimation;
 
@@ -37,7 +37,9 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Image.asset(AssetPaths.logo),
-        const SizedBox(height: 30,),
+        const SizedBox(
+          height: 30,
+        ),
         SlideTransition(
           position: slidingAnimation,
           child: SlidingText(slidingAnimation: slidingAnimation),
@@ -54,15 +56,17 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
       ),
     );
 
-    slidingAnimation = Tween<Offset>(begin: const Offset(0, 5), end: Offset.zero).animate(animationController);
+    slidingAnimation =
+        Tween<Offset>(begin: const Offset(0, 5), end: Offset.zero)
+            .animate(animationController);
     animationController.forward();
   }
 
   void navigateToHome() {
-    Future.delayed(const Duration(seconds: 2), (){
-      Get.to(const HomeView(), transition: Transition.fadeIn, duration: AppConstants.transitionDuration);
+    Future.delayed(const Duration(seconds: 2), () {
+      Get.to(const HomeView(),
+          transition: Transition.fadeIn,
+          duration: AppConstants.transitionDuration);
     });
   }
 }
-
-

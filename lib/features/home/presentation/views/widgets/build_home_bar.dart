@@ -10,14 +10,23 @@ AppBar buildHomeAppBar(BuildContext context, Function setState) {
       context: context,
       actionRow: Row(
         children: [
-          Image.asset(AssetPaths.logo, width: 100, height: 30,),
+          Image.asset(
+            AssetPaths.logo,
+            width: 100,
+            height: 30,
+          ),
           const Spacer(),
           GestureDetector(
-            onTap: (){},
-            child: Icon(Icons.search, size: 35, color: ThemeColors.primaryText,),
+            onTap: () {},
+            child: Icon(
+              Icons.search,
+              size: 35,
+              color: ThemeColors.primaryText,
+            ),
           ),
-          const SizedBox(width: 10,),
+          const SizedBox(
+            width: 10,
+          ),
         ],
-      )
-  );
+      ));
 }

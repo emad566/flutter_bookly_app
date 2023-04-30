@@ -26,8 +26,7 @@ class BookRating extends StatelessWidget {
         ),
         Text(
           '(2390) ',
-          style: AppStyles.style14
-              .copyWith(color: ThemeColors.secondaryText),
+          style: AppStyles.style14.copyWith(color: ThemeColors.secondaryText),
         ),
       ],
     );

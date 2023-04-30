@@ -9,12 +9,12 @@ AppBar buildAppBar({
   bool isShowLeading = true,
   Row? actionRow,
 }) {
-
   return AppBar(
     automaticallyImplyLeading: isShowLeading,
-    leading: isShowLeading ? IconButton(
-      onPressed: (){
-        Get.back();
+    leading: isShowLeading
+        ? IconButton(
+            onPressed: () {
+              Get.back();
             },
             icon: Icon(
               Icons.arrow_back,
@@ -23,23 +23,26 @@ AppBar buildAppBar({
           )
         : Container(),
     actions: [
-      SizedBox(width: isShowLeading? 50 : 20),
-      if(actionRow!=null)
-        Expanded(child: actionRow),
-
+      SizedBox(width: isShowLeading ? 50 : 20),
+      if (actionRow != null) Expanded(child: actionRow),
       IconButton(
-        onPressed: (){
+        onPressed: () {
           setState(() {
             ThemeServices().switchTheme();
           });
         },
-        icon: Get.isDarkMode?
-        Icon(Icons.nightlight_outlined, size: 24, color: ThemeColors.white,)
-            :
-        Icon(Icons.wb_sunny_outlined, size: 24, color: ThemeColors.white,),
+        icon: Get.isDarkMode
+            ? Icon(
+                Icons.nightlight_outlined,
+                size: 24,
+                color: ThemeColors.white,
+              )
+            : Icon(
+                Icons.wb_sunny_outlined,
+                size: 24,
+                color: ThemeColors.white,
+              ),
       ),
-
-
     ],
     elevation: 0,
     backgroundColor: context.theme.colorScheme.background,

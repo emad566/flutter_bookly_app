@@ -1,3 +1,1 @@
-abstract class AppCaches{
-
-}
+abstract class AppCaches {}
