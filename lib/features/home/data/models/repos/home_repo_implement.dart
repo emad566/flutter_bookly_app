@@ -11,7 +11,7 @@ class HomeRepoImp extends HomeRepo {
     try {
       dynamic data = await ApiService.get(
           endPoint: 'volumes?Filtering=free-ebook&q=subject:programming');
-      BooksModel booksModel = BooksModel.fromJson(data);
+      BooksModel booksModel = BooksModel.fromJson(data as Map<String, dynamic>);
       return right(booksModel);
     } on DioError catch (dioError){
       return left(ServerFailure.fromDioError(dioError));

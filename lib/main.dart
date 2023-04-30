@@ -7,6 +7,7 @@ import 'package:flutter_bookly_app/core/services/themes.dart';
 import 'package:flutter_bookly_app/core/utlis/api_services.dart';
 import 'package:flutter_bookly_app/features/home/data/models/repos/home_repo_implement.dart';
 import 'package:flutter_bookly_app/features/home/presentation/view_model/cubit/featured_books_cubit/featured_books_cubit.dart';
+import 'package:flutter_bookly_app/features/home/presentation/view_model/cubit/newest_books_cubit/newest_books_cubit.dart';
 import 'package:flutter_bookly_app/features/home/presentation/views/home_view.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -37,7 +38,8 @@ class _BooklyAppState extends State<BooklyApp> {
 
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context)=> FeaturedBooksCubit(HomeRepoImp()))
+        BlocProvider(create: (context)=> FeaturedBooksCubit(getIt.get<HomeRepoImp>())..fetchFeaturedBooks()),
+        BlocProvider(create: (context)=> NewestBooksCubit(getIt.get<HomeRepoImp>())..fetchNewestBooks())
       ],
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,

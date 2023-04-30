@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bookly_app/core/services/theme_colors.dart';
+import 'package:get/get.dart';
 
 class BookDetailsViewAppBar extends StatelessWidget {
   const BookDetailsViewAppBar({
@@ -11,7 +12,7 @@ class BookDetailsViewAppBar extends StatelessWidget {
     return Row(
       children: [
         IconButton(
-          onPressed: () {},
+          onPressed: () {Get.back();},
           icon: Icon(
             Icons.close,
             size: 32,

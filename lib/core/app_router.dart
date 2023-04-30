@@ -1,4 +1,3 @@
-import 'package:flutter_bookly_app/features/home/presentation/views/book_details_view.dart';
 import 'package:flutter_bookly_app/features/home/presentation/views/home_view.dart';
 import 'package:flutter_bookly_app/features/search/presentation/views/search_view.dart';
 import 'package:flutter_bookly_app/features/splash/presentation/views/splash_view.dart';
@@ -19,10 +18,10 @@ abstract class AppRouter {
       path: routerHomeView,
       builder: (context, state) => const HomeView(),
     ),
-    GoRoute(
-      path: routerBookDetailsView,
-      builder: (context, state) => const BookDetailsView(),
-    ),
+    // GoRoute(
+    //   path: routerBookDetailsView,
+    //   builder: (context, state) => const BookDetailsView(),
+    // ),
     GoRoute(
       path: routerSearchView,
       builder: (context, state) => const SearchView(),

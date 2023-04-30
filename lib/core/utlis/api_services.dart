@@ -29,8 +29,7 @@ class ApiService {
   }) async {
     Response response = await _dio.get(
       endPoint,
-      queryParameters: query,
-      data: data,
+      queryParameters: query
     );
     return response.data;
   }

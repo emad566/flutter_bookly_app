@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bookly_app/core/services/size_config.dart';
 import 'package:flutter_bookly_app/features/home/presentation/views/widgets/book_details_view_texts.dart';
-import 'package:flutter_bookly_app/features/home/presentation/views/widgets/custom_list_view_item.dart';
 
 class BookDetailsBookSection extends StatelessWidget {
   const BookDetailsBookSection({
@@ -17,7 +16,7 @@ class BookDetailsBookSection extends StatelessWidget {
         const SizedBox(height: 16),
         SizedBox(
           width: SizeConfig.screenWidth * 0.35,
-          child: const CustomListViewItem(),
+          child: const Text('wait') //CustomListViewItem(),
         ),
         const SizedBox(height: 16),
         const BookDetailsViewTexts(),
