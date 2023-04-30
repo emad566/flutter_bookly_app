@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bookly_app/core/services/app_styles.dart';
 import 'package:flutter_bookly_app/core/services/theme_colors.dart';
 import 'package:flutter_bookly_app/core/shared/widgets/custom_input_field.dart';
-import 'package:flutter_bookly_app/features/home/presentation/views/widgets/best_seller_list_view.dart';
-import 'package:flutter_bookly_app/features/home/presentation/views/widgets/featured_book_list_view.dart';
 import 'package:flutter_bookly_app/features/search/presentation/views/widgets/result_book_list_view.dart';
 
 class SearchViewBody extends StatelessWidget {
@@ -13,6 +12,7 @@ class SearchViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SizedBox(height: 16,),
         CustomTextField(
@@ -22,7 +22,10 @@ class SearchViewBody extends StatelessWidget {
           isRequired: false,
           suffixIcon: Icon(Icons.search, size: 30, color: ThemeColors.secondaryText,),
         ),
-        const SizedBox(height: 20),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 8),
+          child: Text('Search Result', style: AppStyles.style16Bold,),
+        ),
         const Expanded(child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 12.0),
           child: ResultBookListView(),
