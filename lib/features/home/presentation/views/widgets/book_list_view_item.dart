@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bookly_app/core/constants/aap_constants.dart';
+import 'package:flutter_bookly_app/core/constants/app_constants.dart';
 import 'package:flutter_bookly_app/core/services/app_styles.dart';
 import 'package:flutter_bookly_app/core/services/size_config.dart';
 import 'package:flutter_bookly_app/core/services/theme_colors.dart';
