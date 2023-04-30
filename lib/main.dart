@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bookly_app/core/app_router.dart';
 import 'package:flutter_bookly_app/core/services/my_bloc_observer.dart';
 import 'package:flutter_bookly_app/core/services/theme_services.dart';
 import 'package:flutter_bookly_app/core/services/themes.dart';
-import 'package:flutter_bookly_app/features/home/presentation/views/book_details_view.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
@@ -34,7 +34,13 @@ class _BooklyAppState extends State<BooklyApp> {
       theme: Themes.lightThem,
       darkTheme: Themes.darkThem,
       themeMode: themeMode,
-      home:  const BookDetailsView(),
+      home:  MaterialApp.router(
+        debugShowCheckedModeBanner: false,
+        theme: Themes.lightThem,
+        darkTheme: Themes.darkThem,
+        themeMode: themeMode,
+        routerConfig: AppRouter.router,
+      ),
     );
   }
 }
