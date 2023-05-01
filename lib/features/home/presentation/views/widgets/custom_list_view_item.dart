@@ -13,7 +13,7 @@ class CustomListViewItem extends StatelessWidget {
       aspectRatio: 2.7 / 4,
       child: GestureDetector(
         onTap: (){Get.to(BookDetailsView(book: book));},
-        child: CustomCachedImage(url: book.volumeInfo!.imageLinks!.thumbnail!),
+        child: CustomCachedImage(url: book.volumeInfo!.imageLinks?.thumbnail?? ""),
       ),
     );
   }

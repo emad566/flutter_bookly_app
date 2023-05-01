@@ -11,41 +11,31 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-
-    return CustomScrollView(
-      physics: const BouncingScrollPhysics(),
-      slivers: [
-        SliverToBoxAdapter(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                height: SizeConfig.screenHeight * .3,
-                child: const FeaturedBookListView(),
-              ),
-              const SizedBox(height: 30),
-              Padding(
-                padding: const EdgeInsets.only(left: 16.0),
-                child: Text(
-                  'Best Seller',
-                  style: AppStyles.style22Bold,
-                  textAlign: TextAlign.left,
-                ),
-              ),
-              const SizedBox(height: 20),
-            ],
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(
+            height: SizeConfig.screenHeight * .3,
+            child: const FeaturedBookListView(),
           ),
-        ),
-        // ignore: prefer_const_constructors
-        SliverFillRemaining(
-          // ignore: prefer_const_constructors
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          const SizedBox(height: 30),
+          Padding(
+            padding: const EdgeInsets.only(left: 16.0),
+            child: Text(
+              'Best Seller',
+              style: AppStyles.style22Bold,
+              textAlign: TextAlign.left,
+            ),
+          ),
+          const SizedBox(height: 20),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             // ignore: prefer_const_constructors
             child: BestSellerListView(),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

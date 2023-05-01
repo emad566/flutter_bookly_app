@@ -10,7 +10,7 @@ class HomeRepoImp extends HomeRepo {
   Future<Either<Failure, BooksModel>> fetchFeaturedBooks() async {
     try {
       dynamic data = await ApiService.get(
-          endPoint: 'volumes?Filtering=free-ebook&q=subject:programming');
+          endPoint: 'volumes?Filtering=free-ebooks&q=subject:Programming');
       BooksModel booksModel = BooksModel.fromJson(data as Map<String, dynamic>);
       return right(booksModel);
     } on DioError catch (dioError){
@@ -22,15 +22,15 @@ class HomeRepoImp extends HomeRepo {
 
   @override
   Future<Either<Failure, BooksModel>> fetchNewestBooks() async {
-    try {
+    // try {
       dynamic data = await ApiService.get(
-          endPoint: 'volumes?Filtering=free-ebook&q=subject:programming');
+          endPoint: 'volumes?Filtering=free-ebooks&Sorting=newest &q=computer science');
       BooksModel booksModel = BooksModel.fromJson(data);
       return right(booksModel);
-    } on DioError catch (dioError){
-      return left(ServerFailure.fromDioError(dioError));
-    } catch(e){
-      return left(ServerFailure(e.toString()));
-    }
+    // } on DioError catch (dioError){
+    //   return left(ServerFailure.fromDioError(dioError));
+    // } catch(e){
+    //   return left(ServerFailure(e.toString()));
+    // }
   }
 }

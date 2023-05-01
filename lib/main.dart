@@ -38,8 +38,8 @@ class _BooklyAppState extends State<BooklyApp> {
 
     return MultiBlocProvider(
       providers: [
+        BlocProvider(create: (context)=> NewestBooksCubit(getIt.get<HomeRepoImp>())..fetchNewestBooks()),
         BlocProvider(create: (context)=> FeaturedBooksCubit(getIt.get<HomeRepoImp>())..fetchFeaturedBooks()),
-        BlocProvider(create: (context)=> NewestBooksCubit(getIt.get<HomeRepoImp>())..fetchNewestBooks())
       ],
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,

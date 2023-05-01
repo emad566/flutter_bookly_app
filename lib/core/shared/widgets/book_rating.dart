@@ -7,7 +7,7 @@ class BookRating extends StatelessWidget {
     super.key, required this.rate, required this.count,
   });
 
-  final int rate;
+  final double rate;
   final int count;
 
   @override

@@ -17,7 +17,7 @@ class ApiService {
       BaseOptions(
         baseUrl: ApiRoutes.baseURL,
         headers: headersOption,
-        receiveDataWhenStatusError: true,
+        // receiveDataWhenStatusError: true,
       ),
     );
   }

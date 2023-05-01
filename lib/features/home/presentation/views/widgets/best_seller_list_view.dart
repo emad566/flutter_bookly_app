@@ -18,15 +18,14 @@ class BestSellerListView extends StatelessWidget {
         if(state is NewestBooksSuccessState){
           List<BookModel> books = state.booksModel.items != null ? state.booksModel.items! : [];
           if(books.isEmpty) return const NoItems();
-
-          return ListView.separated(
-            physics: const NeverScrollableScrollPhysics(),
+          return ListView.builder(
+            shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              padding: EdgeInsets.zero,
             itemBuilder: (BuildContext context, int index)  {
-              return BookListViewItem(book: books[index]);
-            },
-            separatorBuilder: (BuildContext context, int index) {
-              return const SizedBox(
-                height: 16,
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                child: BookListViewItem(book: books[index]),
               );
             },
             itemCount: books.length,
