@@ -4,9 +4,12 @@ import 'package:flutter_bookly_app/core/services/app_styles.dart';
 import 'package:flutter_bookly_app/core/services/size_config.dart';
 import 'package:flutter_bookly_app/core/services/theme_colors.dart';
 import 'package:flutter_bookly_app/core/shared/widgets/book_rating.dart';
+import 'package:flutter_bookly_app/features/home/data/models/book_model/book_model.dart';
+import 'package:flutter_bookly_app/features/home/presentation/views/widgets/custom_list_view_item.dart';
 
 class BookListViewItem extends StatelessWidget {
-  const BookListViewItem({Key? key}) : super(key: key);
+  const BookListViewItem({Key? key, required this.book}) : super(key: key);
+  final BookModel book;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +20,7 @@ class BookListViewItem extends StatelessWidget {
         SizedBox(
           width: SizeConfig.screenWidth * 0.23,
           height: SizeConfig.screenHeight * 0.2,
-          child: const Text('wait') //CustomListViewItem(),
+          child: CustomListViewItem(book: book),
         ),
         const SizedBox(
           width: 24,
@@ -28,7 +31,7 @@ class BookListViewItem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Haryy Potter and the Goblet of Fire',
+                book.volumeInfo!.title!,
                 style: AppStyles.style18Bold.copyWith(
                   fontFamily: AppConstants.secondaryFontFamily,
                 ),
@@ -40,7 +43,7 @@ class BookListViewItem extends StatelessWidget {
                 height: 8,
               ),
               Text(
-                'J.K. Rowling',
+                book.volumeInfo!.authors![0],
                 style: AppStyles.style14.copyWith(
                   color: ThemeColors.secondaryBg,
                 ),
@@ -51,11 +54,14 @@ class BookListViewItem extends StatelessWidget {
               Row(
                 children: [
                   Text(
-                    '19.99 \$',
+                    'Free',
                     style: AppStyles.style18Bold,
                   ),
                   const Spacer(),
-                  const BookRating(),
+                  BookRating(
+                    rate: book.volumeInfo!.averageRating?? 0,
+                    count: book.volumeInfo!.ratingsCount?? 0,
+                  ),
                 ],
               ),
             ],

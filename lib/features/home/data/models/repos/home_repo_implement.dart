@@ -24,7 +24,7 @@ class HomeRepoImp extends HomeRepo {
   Future<Either<Failure, BooksModel>> fetchNewestBooks() async {
     try {
       dynamic data = await ApiService.get(
-          endPoint: 'volumes?Filtering=free-ebook&q=subject:programming&sorting=newest');
+          endPoint: 'volumes?Filtering=free-ebook&q=subject:programming');
       BooksModel booksModel = BooksModel.fromJson(data);
       return right(booksModel);
     } on DioError catch (dioError){

@@ -4,8 +4,11 @@ import 'package:flutter_bookly_app/core/services/theme_colors.dart';
 
 class BookRating extends StatelessWidget {
   const BookRating({
-    super.key,
+    super.key, required this.rate, required this.count,
   });
+
+  final int rate;
+  final int count;
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +24,11 @@ class BookRating extends StatelessWidget {
           ),
         ),
         Text(
-          '4.8  ',
+          '$rate  ',
           style: AppStyles.style16,
         ),
         Text(
-          '(2390) ',
+          '($count) ',
           style: AppStyles.style14.copyWith(color: ThemeColors.secondaryText),
         ),
       ],

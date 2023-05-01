@@ -32,7 +32,7 @@ class BookDetailsViewTexts extends StatelessWidget {
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),
-        const BookRating(),
+        const BookRating(rate: 5, count: 1567),
       ],
     );
   }
